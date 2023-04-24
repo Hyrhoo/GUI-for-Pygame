@@ -2,7 +2,7 @@
 
 from GUI.screen import Screen
 from GUI.color import Color
-from GUI.__init import *
+from GUI.__initialisation import *
 
 class Interact_Object:
     OBJECT_RADIUS = 9999999
@@ -50,8 +50,8 @@ class Interact_Object:
         rad2 = self.screen.resize(self.border_radius)
         pygame.draw.rect(surf1, self.object_color, rect, border_radius=rad1)
         pygame.draw.rect(surf1, self.border_color, rect, rad2, rad1)
-        pygame.draw.rect(surf2, self.object_color.copy().darcker(self.DARCKER_POURCENTAGE), rect, border_radius=rad1)
-        pygame.draw.rect(surf2, self.border_color.copy().darcker(self.DARCKER_POURCENTAGE), rect, rad2, rad1)
+        pygame.draw.rect(surf2, self.object_color.copy().darken(self.DARCKER_POURCENTAGE), rect, border_radius=rad1)
+        pygame.draw.rect(surf2, self.border_color.copy().darken(self.DARCKER_POURCENTAGE), rect, rad2, rad1)
         return surf1, surf2
 
     def updat(self, surface) -> None:
@@ -109,7 +109,7 @@ class Interact_Object:
 if __name__ == "__main__":
     screen = Screen()
     color1 = Color(255, 0, 255)
-    color2 = color1.copy().darcker(20)
+    color2 = color1.copy().darken(20)
     i_object = Interact_Object(screen, screen.mid_screen(screen.DEFOLT_SCREEN_SIZE[0]), 
                                screen.mid_screen(screen.DEFOLT_SCREEN_SIZE[1]),
                                200, 50, color1, color2)

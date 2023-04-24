@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from GUI.__init import *
+from GUI.__initialisation import *
 
 class Screen:
     DEFOLT_SCREEN_SIZE = (1920, 1080)

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from GUI.constants import DEFAULT_FOLDER, DEFAULT_EXTENTION, SOUND_FOLDER, MUSICS, SOUNDS
-from GUI.__init import *
+from GUI.__initialisation import *
 
 class Sounds:
     def __init__(self, path, musics=MUSICS, sounds=SOUNDS) -> None:

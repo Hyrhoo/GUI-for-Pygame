@@ -3,6 +3,7 @@ import sys
 import os
 import pathlib
 import pygame
+from typing import overload
 
 pygame.mixer.pre_init()
 pygame.init()
