@@ -2,7 +2,7 @@
 
 > cette bibliothèque nécessite `Pygame` pour fonctionner
 
-une GUI pour pygame pour faire des menus
+une GUI pour pygame pour faire des menus (pas encore fonctionnel)
 
 c'est sensé être une bibliothèque pour faire des menues donc on peut:
  - soit la mettre dans le dossier du projet dans lequel on veut l'utiliser
