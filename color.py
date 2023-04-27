@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from GUI.__initialisation import *
+from GUI.initialisation import *
 
 class Color(pygame.color.Color):
 
@@ -15,10 +15,10 @@ class Color(pygame.color.Color):
         """lighten the color by the given percentage
 
         Args:
-            additive_percentage (float): the percentage by which to lighten between 0 and 100
+            - additive_percentage (float): the percentage by which to lighten between 0 and 100
 
         Returns:
-            Color: the new color
+            - Color: the new color
         """
         self.r += round(((255 - self.r)/100) * additive_percentage)
         self.g += round(((255 - self.g)/100) * additive_percentage)
@@ -29,12 +29,12 @@ class Color(pygame.color.Color):
         """lighten the value of each r,g,b values by the given percentage 
 
         Args:
-            r (float): the change for the `r` value between 0 and 100
-            g (float): the change for the `g` value between 0 and 100
-            b (float): the change for the `b` value between 0 and 100
+            - r (float): the change for the `r` value between 0 and 100
+            - g (float): the change for the `g` value between 0 and 100
+            - b (float): the change for the `b` value between 0 and 100
 
         Returns:
-            Color: the new color
+            - Color: the new color
         """
         self.r += round(((255 - self.r)/100) * r)
         self.g += round(((255 - self.g)/100) * g)
@@ -46,10 +46,10 @@ class Color(pygame.color.Color):
         """darken the color by the given percentage
 
         Args:
-            subtractive_percentage (float): the percentage by which to darken between 0 and 100
+            - subtractive_percentage (float): the percentage by which to darken between 0 and 100
 
         Returns:
-            Color: the new color
+            - Color: the new color
         """
         self.r = round((self.r/100) * (100-subtractive_percentage))
         self.g = round((self.g/100) * (100-subtractive_percentage))
@@ -60,12 +60,12 @@ class Color(pygame.color.Color):
         """darken the value of each r,g,b values by the given percentage 
 
         Args:
-            r (float): the change for the `r` value between 0 and 100
-            g (float): the change for the `g` value between 0 and 100
-            b (float): the change for the `b` value between 0 and 100
+            - r (float): the change for the `r` value between 0 and 100
+            - g (float): the change for the `g` value between 0 and 100
+            - b (float): the change for the `b` value between 0 and 100
 
         Returns:
-            Color: the new color
+            - Color: the new color
         """
         self.r = round((self.r/100) * (100-r))
         self.g = round((self.g/100) * (100-g))
@@ -77,10 +77,10 @@ class Color(pygame.color.Color):
         if the given number is negative darken the value, if it's positive, it will lighten it
 
         Args:
-            percentage (float): the change of the color between -100 and 100
+            - percentage (float): the change of the color between -100 and 100
 
         Returns:
-            Color: the new color
+            - Color: the new color
         """
         if percentage < 0: self.darken(abs(percentage))
         elif percentage > 0: self.lighten(percentage)
@@ -92,12 +92,12 @@ class Color(pygame.color.Color):
         if the given number is negative darken the value, if it's positive, it will lighten it
 
         Args:
-            r (float): the change for the `r` value between -100 and 100
-            g (float): the change for the `g` value between -100 and 100
-            b (float): the change for the `b` value between -100 and 100
+            - r (float): the change for the `r` value between -100 and 100
+            - g (float): the change for the `g` value between -100 and 100
+            - b (float): the change for the `b` value between -100 and 100
 
         Returns:
-            Color: the new color
+            - Color: the new color
         """
         if r < 0: self.darken_values(abs(r), 0, 0)
         elif r > 0: self.lighten_values(r, 0, 0)
@@ -114,7 +114,7 @@ class Color(pygame.color.Color):
         """reset the r,g,b,a values of the color to there initial values
 
         Returns:
-            Color: the new color
+            - Color: the new color
         """
         self.r = self.__initial_r
         self.g = self.__initial_g
@@ -126,9 +126,9 @@ class Color(pygame.color.Color):
         """copy the color
 
         Returns:
-            Color: the copy of the color
+            - Color: the copy of the color
         """
-        return Color(self.__initial_r, self.__initial_g, self.__initial_b, self.__initial_a)
+        return Color(self.r, self.g, self.b, self.a)
 
 
 if __name__ == "__main__":

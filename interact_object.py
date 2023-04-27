@@ -2,7 +2,7 @@
 
 from GUI.screen import Screen
 from GUI.color import Color
-from GUI.__initialisation import *
+from GUI.initialisation import *
 
 class Interact_Object:
     OBJECT_RADIUS = 9999999
@@ -110,8 +110,8 @@ if __name__ == "__main__":
     screen = Screen()
     color1 = Color(255, 0, 255)
     color2 = color1.copy().darken(20)
-    i_object = Interact_Object(screen, screen.mid_screen(screen.DEFOLT_SCREEN_SIZE[0]), 
-                               screen.mid_screen(screen.DEFOLT_SCREEN_SIZE[1]),
+    i_object = Interact_Object(screen, screen.mid_screen(screen.__DEFOLT_SCREEN_SIZE[0]), 
+                               screen.mid_screen(screen.__DEFOLT_SCREEN_SIZE[1]),
                                200, 50, color1, color2)
     while True:
         for event in pygame.event.get():

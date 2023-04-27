@@ -1,6 +1,6 @@
 # GUI-for-Pygame
 
-> Cette bibliothèque nécessite `Pygame` pour fonctionner.
+> Cette bibliothèque nécessite `pygame` et `multipledispatch` pour fonctionner.
 
 Il s'agit d'une GUI pour Pygame pour créer des menus (actuellement non fonctionnelle).
 
@@ -9,4 +9,4 @@ Elle est destinée à être utilisée comme une bibliothèque pour créer des me
    - `Library/Python/<version>/site-packages` sur Mac OS.
    - `lib/python<version>/site-packages` sur Linux.
 
-Vous devrez également changer le nom du dossier pour pouvoir l'importer, en enlevant les `-`. (Vous pouvez l'appeler comme vous le souhaitez.)
+Vous devrez également changer le nom du dossier pour pouvoir l'importer en le renommant `GUI` (un autre nom ne marcheras pas)
